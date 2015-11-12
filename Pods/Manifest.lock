@@ -1,0 +1,13 @@
+PODS:
+  - Google-Maps-iOS-SDK (1.9.0)
+  - performSelector-swift (0.1.0)
+
+DEPENDENCIES:
+  - Google-Maps-iOS-SDK
+  - performSelector-swift
+
+SPEC CHECKSUMS:
+  Google-Maps-iOS-SDK: d176593f33f931a500474a46c2a3c3d6d4b187cd
+  performSelector-swift: 5bee0fed10c9dcd2706b27947ed406e8a03c5470
+
+COCOAPODS: 0.35.0

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mapviewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="CMU_SV_Indoor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ne3-yd-X3F" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="22" width="600" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-yd-KqY">
+                                <rect key="frame" x="145" y="27" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.49803921568627452" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4mF-Ag-SJJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="o22-Q4-ZlL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDP (Off): Stopped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTV-tB-sd4">
+                                <rect key="frame" x="200" y="27" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="i3n-XW-wYj"/>
+                                    <constraint firstAttribute="width" constant="200" id="i9Y-M9-nnz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nho-y3-o1R">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Rjo-rk-COj"/>
+                                    <barButtonItem image="Outdoor.png" width="44" style="plain" id="bg3-vW-SES">
+                                        <color key="tintColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didTapIndoorOutdoorButton:" destination="BYZ-38-t0r" id="vid-RN-g5k"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XPO-WU-cuC"/>
+                                    <barButtonItem enabled="NO" title="1F" width="30" style="plain" id="PGJ-If-uHR">
+                                        <color key="tintColor" red="0.0" green="0.49803921568627452" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didTapMyFloorNumberButton:" destination="BYZ-38-t0r" id="3t7-bp-rcS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="v2f-48-qzZ"/>
+                                    <barButtonItem image="MyPosition.png" width="44" style="plain" id="3eq-LI-DcU">
+                                        <color key="tintColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didTapMyPositionButton:" destination="BYZ-38-t0r" id="Qx2-xV-lEc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZCe-yb-G8y"/>
+                                    <barButtonItem title="1F" width="30" style="plain" id="6O8-oS-C8u">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="didTapViewFloorNumberButton:" destination="BYZ-38-t0r" id="O6D-MV-fmp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JbH-HJ-uJ5"/>
+                                    <barButtonItem title="Normal" style="plain" id="IPI-yi-auZ">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="didTapMapTypeButton:" destination="BYZ-38-t0r" id="uif-Ra-VXg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vZT-gP-aCj"/>
+                                    <barButtonItem image="Search.png" style="plain" id="CrV-ZU-vql">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="didTapSearchbutton:" destination="BYZ-38-t0r" id="oA3-sj-3bu"/>
+                                            <segue destination="57D-mx-SEz" kind="presentation" id="TeE-bi-x3e"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Q0-iO-mho"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ne3-yd-X3F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="00E-6f-nMS"/>
+                            <constraint firstItem="Nho-y3-o1R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3dR-1K-aZo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nho-y3-o1R" secondAttribute="bottom" id="77n-sL-4hG"/>
+                            <constraint firstAttribute="centerX" secondItem="bTV-tB-sd4" secondAttribute="centerX" id="BnW-y2-n4R"/>
+                            <constraint firstItem="Nho-y3-o1R" firstAttribute="top" secondItem="ne3-yd-X3F" secondAttribute="bottom" id="MdH-no-4wE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ne3-yd-X3F" secondAttribute="trailing" constant="-16" id="NLb-6N-Bje"/>
+                            <constraint firstItem="ne3-yd-X3F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="SYx-fw-Y11"/>
+                            <constraint firstItem="bTV-tB-sd4" firstAttribute="leading" secondItem="Yef-yd-KqY" secondAttribute="trailing" constant="5" id="YTJ-4E-BdP"/>
+                            <constraint firstItem="Yef-yd-KqY" firstAttribute="top" secondItem="ne3-yd-X3F" secondAttribute="top" constant="5" id="kQs-9y-Ygv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nho-y3-o1R" secondAttribute="trailing" constant="-16" id="rLd-mW-qbe"/>
+                            <constraint firstItem="bTV-tB-sd4" firstAttribute="top" secondItem="ne3-yd-X3F" secondAttribute="top" constant="5" id="wzd-J4-wTq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IndoorPositionerStateLabel" destination="bTV-tB-sd4" id="ant-u6-GIR"/>
+                        <outlet property="currentBuildingLabel" destination="Yef-yd-KqY" id="1vB-Og-4bC"/>
+                        <outlet property="indoorOutdoorButton" destination="bg3-vW-SES" id="tPG-zx-RwD"/>
+                        <outlet property="indoorPositionerStateLabel" destination="bTV-tB-sd4" id="cMV-oX-oCo"/>
+                        <outlet property="mapTypeButton" destination="IPI-yi-auZ" id="3aG-lr-1bU"/>
+                        <outlet property="mapView" destination="ne3-yd-X3F" id="7UO-gx-DjX"/>
+                        <outlet property="myFloorNumberButton" destination="PGJ-If-uHR" id="EbQ-Qh-nyQ"/>
+                        <outlet property="myPositionButton" destination="3eq-LI-DcU" id="TId-Ge-2Vk"/>
+                        <outlet property="viewFloorNumberButton" destination="6O8-oS-C8u" id="ldT-gc-xWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="199"/>
+        </scene>
+        <!--Search Modal View Controller-->
+        <scene sceneID="Goi-71-WQx">
+            <objects>
+                <viewController storyboardIdentifier="searchmodalViewController" id="57D-mx-SEz" customClass="searchModalViewController" customModule="CMU_SV_Indoor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nrj-GK-6pQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cGD-iS-XOz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oyO-pa-mTF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maM-iS-6NR">
+                                <rect key="frame" x="203" y="72" width="195" height="124"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="BACK TO MAP"/>
+                                <connections>
+                                    <action selector="backtomapBtn:" destination="57D-mx-SEz" eventType="touchUpInside" id="16e-6w-6Gj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXq-mF-3u5">
+                                <rect key="frame" x="197" y="194" width="206" height="124"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="BACK TO MAP2"/>
+                                <connections>
+                                    <action selector="backtomapBtn2:" destination="57D-mx-SEz" eventType="touchUpInside" id="W2o-vc-FzN"/>
+                                    <action selector="backtomapBtn:" destination="57D-mx-SEz" eventType="touchUpInside" id="2oC-Uk-2xf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLc-fe-4ki">
+                                <rect key="frame" x="197" y="363" width="206" height="124"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="Learning Lab"/>
+                                <connections>
+                                    <action selector="backtomapBtn2:" destination="57D-mx-SEz" eventType="touchUpInside" id="ldx-R0-m0d"/>
+                                    <action selector="backtomapBtn3:" destination="57D-mx-SEz" eventType="touchUpInside" id="9CG-t5-TNG"/>
+                                    <action selector="backtomapBtn:" destination="57D-mx-SEz" eventType="touchUpInside" id="Hmi-ib-K23"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backtomapSegue" id="tx4-IL-uxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siv-QR-hz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="194"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MyPosition.png" width="44" height="44"/>
+        <image name="Outdoor.png" width="44" height="44"/>
+        <image name="Search.png" width="44" height="44"/>
+    </resources>
+</document>
