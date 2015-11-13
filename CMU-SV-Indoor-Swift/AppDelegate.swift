@@ -8,6 +8,10 @@
 
 import UIKit
 
+//added by Jon on 11/12/15 to work with Parse
+import Parse
+import Bolts
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,6 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         print("Google Map iOS SDK Version: \(GMSServices.SDKVersion())")
         print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
+        
+        
+        //Parse stuff added by Jon on 11/12/15, following "connect your app to parse" from parse.com/apps/quickstart#parse_data/mobile/ios/swift/existing
+        // [Optional] Power your app with Local Datastore. For more info, go to
+        // https://parse.com/docs/ios_guide#localdatastore/iOS
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("Hez9mILYRGculdTBx0ygYrCEtrNAkAqMqvziUGak",
+            clientKey: "oZbZYm9lUb4MkwZ3SppwwzPTyKxISKesAs9Vn87z")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         return true
     }

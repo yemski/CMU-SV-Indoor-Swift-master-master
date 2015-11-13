@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "53A8C487692AC73784A2B1A481CC8ABDE1537A73",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "19F9CC529CC6BE36AEF7CF44FF8194DA67064C4C" : 0,
+    "53A8C487692AC73784A2B1A481CC8ABDE1537A73" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E9B54E3A-74BC-461F-8327-56AA75FAE8BA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "19F9CC529CC6BE36AEF7CF44FF8194DA67064C4C" : "CMU-SV-Indoor-Swift",
+    "53A8C487692AC73784A2B1A481CC8ABDE1537A73" : "CMU-SV-Indoor-Swift-master-master\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CMU-SV-Indoor-Swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CMU-SV-Indoor-Swift.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gt-liu\/CMU-SV-Indoor-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19F9CC529CC6BE36AEF7CF44FF8194DA67064C4C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yemski\/CMU-SV-Indoor-Swift-master-master.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "53A8C487692AC73784A2B1A481CC8ABDE1537A73"
+    }
+  ]
+}
