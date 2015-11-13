@@ -44,6 +44,8 @@
 		C01F8A731BF5732F0029791E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01F8A671BF5732F0029791E /* Social.framework */; };
 		C01F8A741BF5732F0029791E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01F8A681BF5732F0029791E /* StoreKit.framework */; };
 		C01F8A751BF5732F0029791E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01F8A691BF5732F0029791E /* SystemConfiguration.framework */; };
+		C0DD0F291BF58EDD003FA432 /* LocationResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DD0F281BF58EDD003FA432 /* LocationResultsCell.swift */; };
+		C0DD0F2B1BF58F11003FA432 /* LocationFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DD0F2A1BF58F11003FA432 /* LocationFinderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		C01F8A671BF5732F0029791E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C01F8A681BF5732F0029791E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C01F8A691BF5732F0029791E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C0DD0F281BF58EDD003FA432 /* LocationResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationResultsCell.swift; sourceTree = "<group>"; };
+		C0DD0F2A1BF58F11003FA432 /* LocationFinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFinderViewController.swift; sourceTree = "<group>"; };
 		D1FCBD5CBCBD9D7E837EBE9B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +193,8 @@
 			children = (
 				87BD4AB81A351FD600B07038 /* LaunchScreen.xib */,
 				87BD4ABA1A351FD600B07038 /* Main.storyboard */,
+				C0DD0F281BF58EDD003FA432 /* LocationResultsCell.swift */,
+				C0DD0F2A1BF58F11003FA432 /* LocationFinderViewController.swift */,
 				1A30BC001BF43FF3006D2E9A /* searchModalViewController.swift */,
 				87BD4A981A351F2F00B07038 /* AppDelegate.swift */,
 				87BD4ABE1A351FF800B07038 /* Config.swift */,
@@ -415,9 +421,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BD4A991A351F2F00B07038 /* AppDelegate.swift in Sources */,
+				C0DD0F291BF58EDD003FA432 /* LocationResultsCell.swift in Sources */,
 				87BD4AC71A351FF800B07038 /* MapViewController.swift in Sources */,
 				87FAE4FA1A352FCB0025FD51 /* IndoorPositionerProtocols.swift in Sources */,
 				87BD4AC41A351FF800B07038 /* GPSPositioner.swift in Sources */,
+				C0DD0F2B1BF58F11003FA432 /* LocationFinderViewController.swift in Sources */,
 				1A30BC011BF43FF3006D2E9A /* searchModalViewController.swift in Sources */,
 				87BD4AC31A351FF800B07038 /* Config.swift in Sources */,
 				87BD4AC51A351FF800B07038 /* Helper.swift in Sources */,
