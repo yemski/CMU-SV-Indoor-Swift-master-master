@@ -56,15 +56,46 @@ class LocationFinderViewController: UIViewController, UITableViewDataSource, UIT
         
         cell.nameLabel.text = location["Room_Name"] as? String
         
-        if location["Building"] == "SB850C" {
+        let building = location["Building"] as? String
+        
+        if building == "SB850C" {
             cell.buildingsAddressLabel.text = "850 Cherry Ave., San Bruno"
-        } else if location["Building"] == "SB860E" {
+        } else if building == "SB860E" {
             cell.buildingsAddressLabel.text = "860 Elm Ave., San Bruno"
-        } else if location["Building"] == "SV850C" {
+        } else if building == "SV850C" {
             cell.buildingsAddressLabel.text = "850 California Ave., Sunnyvale"
-        } else if location["Building"] == "SV850C" {
+        } else if building == "SV850C" {
             cell.buildingsAddressLabel.text = "840 California Ave., Sunnyvale"
         }
+        
+        let isRoom = location["isRoom"] as! Bool
+        let isAvailable = location["Available_now"] as? Bool
+        let hasCapacity = location["Capacity"] as? Int
+        
+        if isRoom {
+            cell.locationTypeImageView.image = UIImage(named: "room icon")
+            
+            if isAvailable != nil && isAvailable == true {
+                cell.roomAvailabilityLabel.text = "Available Now"
+                cell.roomAvailabilityLabel.textColor = UIColor.greenColor()
+            } else if isAvailable != nil && isAvailable == false {
+                cell.roomAvailabilityLabel.text = "Not Available"
+                cell.roomAvailabilityLabel.textColor = UIColor.redColor()
+            } else {
+                cell.roomAvailabilityLabel.text = "Availability Unknown"
+                cell.roomAvailabilityLabel.textColor = UIColor.grayColor()
+            }
+            
+            cell.roomCapacityLabel.text = location["Capacity"] as? String
+            cell.roomAvailabilityLabel.alpha = 1
+            cell.roomCapacityLabel.alpha = 1
+            
+        } else {  //if isRoom is false, then we're assuming it's a person. Could there be other types to capture? would we want to return the person's title, if available? any other data for people?
+            cell.locationTypeImageView.image = UIImage(named: "person icon")
+            cell.roomAvailabilityLabel.alpha = 0
+            cell.roomCapacityLabel.alpha = 0
+        }
+        
         
         return cell
     }

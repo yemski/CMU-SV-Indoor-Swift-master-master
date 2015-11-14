@@ -16,6 +16,7 @@ class LocationResultsCell: UITableViewCell {
     @IBOutlet weak var roomCapacityLabel: UILabel!
     @IBOutlet weak var roomAvailabilityLabel: UILabel!
     
+    @IBOutlet weak var locationTypeImageView: UIImageView!
     
     
     
