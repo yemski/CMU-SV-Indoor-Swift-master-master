@@ -36,8 +36,8 @@ class LocationFinderViewController: UIViewController, UITableViewDataSource, UIT
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 100
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +47,7 @@ class LocationFinderViewController: UIViewController, UITableViewDataSource, UIT
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
+        print("locations.count = \(locations.count)")
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -68,11 +69,19 @@ class LocationFinderViewController: UIViewController, UITableViewDataSource, UIT
             cell.buildingsAddressLabel.text = "840 California Ave., Sunnyvale"
         }
         
+        let onFloor = location["Floor"] as? Int
+        if onFloor != nil {
+            cell.floorNumberLabel.text = "Floor: \(location["Floor"])"
+        } else if onFloor == nil {
+            cell.floorNumberLabel.text = "Floor unknown"
+            cell.floorNumberLabel.textColor = UIColor.lightGrayColor()
+        }
+               
         let isRoom = location["isRoom"] as! Bool
         let isAvailable = location["Available_now"] as? Bool
         let hasCapacity = location["Capacity"] as? Int
         
-        if isRoom {
+        if isRoom == true {
             cell.locationTypeImageView.image = UIImage(named: "room icon")
             
             if isAvailable != nil && isAvailable == true {
@@ -86,7 +95,7 @@ class LocationFinderViewController: UIViewController, UITableViewDataSource, UIT
                 cell.roomAvailabilityLabel.textColor = UIColor.grayColor()
             }
             
-            cell.roomCapacityLabel.text = location["Capacity"] as? String
+            cell.roomCapacityLabel.text = "Capacity: \(location["Capacity"])"
             cell.roomAvailabilityLabel.alpha = 1
             cell.roomCapacityLabel.alpha = 1
             
