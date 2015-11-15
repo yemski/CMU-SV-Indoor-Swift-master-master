@@ -186,13 +186,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Availability Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pk-eg-rV4">
-                                                    <rect key="frame" x="228" y="77" width="145" height="21"/>
+                                                    <rect key="frame" x="135" y="77" width="145" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmJ-6e-xGA">
-                                                    <rect key="frame" x="420" y="78" width="110" height="21"/>
+                                                    <rect key="frame" x="302" y="78" width="110" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -206,6 +206,7 @@
                                             <outlet property="nameLabel" destination="khN-oD-6i0" id="l8T-q2-tXv"/>
                                             <outlet property="roomAvailabilityLabel" destination="0pk-eg-rV4" id="eus-pT-UkK"/>
                                             <outlet property="roomCapacityLabel" destination="fmJ-6e-xGA" id="9k6-bY-aok"/>
+                                            <segue destination="kju-hX-IL5" kind="modal" id="0Qg-Bz-cbZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -221,6 +222,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AL-Z1-TNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452" y="-568"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="hnH-N3-G3b">
+            <objects>
+                <viewController id="kju-hX-IL5" userLabel="Test View Controller" customClass="TestViewController" customModule="CMU_SV_Indoor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TRo-U8-b11"/>
+                        <viewControllerLayoutGuide type="bottom" id="74X-ds-Vzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20L-SG-Vqs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Pq-Z0-0ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="-568"/>
         </scene>
         <!--Search Modal View Controller-->
         <scene sceneID="Goi-71-WQx">
